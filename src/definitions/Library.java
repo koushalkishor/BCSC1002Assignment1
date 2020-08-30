@@ -48,4 +48,17 @@ public class Library {
         return Arrays.toString(allCurrentlyAvailableBooks);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Library)) return false;
+        Library library = (Library) o;
+        return Arrays.equals(getAllCurrentlyAvailableBooks(), library.getAllCurrentlyAvailableBooks());
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(getAllCurrentlyAvailableBooks());
+    }
+
 }
