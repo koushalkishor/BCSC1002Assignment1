@@ -11,4 +11,5 @@ public class Student {
     private String middleName;
     private String lastName;
     private long universityRollNumber;
+    private int numberOfBooksIssued;
 }
