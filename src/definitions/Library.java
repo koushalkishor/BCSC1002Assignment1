@@ -34,5 +34,11 @@ public class Library {
         }
     }
 
+    public Book[] getAllCurrentlyAvailableBooks() {
+        return allCurrentlyAvailableBooks;
+    }
 
+    public void setAllCurrentlyAvailableBooks(Book[] allCurrentlyAvailableBooks) {
+        this.allCurrentlyAvailableBooks = allCurrentlyAvailableBooks;
+    }
 }
