@@ -11,6 +11,17 @@ public class Book {
     private String authorName;
     private String ISBNNumber;
 
+    public Book() {
+        bookName = "Ramayan";
+        authorName = "Tulsi Das";
+        ISBNNumber = "9018478945618";
+    }
+
+    public Book(String bookName, String authorName, String ISBNNumber) {
+        this.bookName = bookName;
+        this.authorName = authorName;
+        this.ISBNNumber = ISBNNumber;
+    }
 
     public String getBookName() {
         return bookName;
@@ -35,4 +46,6 @@ public class Book {
     public void setISBNNumber(String ISBNNumber) {
         this.ISBNNumber = ISBNNumber;
     }
+
+
 }
