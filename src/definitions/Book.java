@@ -25,6 +25,12 @@ public class Book {
         this.ISBNNumber = ISBNNumber;
     }
 
+    public Book(String bookName) {
+        this.bookName = "Mahabharat";
+        this.authorName = "Ved Vyas";
+        this.ISBNNumber = "9120531200931";
+    }
+
     public String getBookName() {
         return bookName;
     }
@@ -52,7 +58,6 @@ public class Book {
     public String toString() {
         return String.format("Book Name: %s,Author Name: %s,ISBN Number: %s", getBookName(), getAuthorName(), getISBNNumber());
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

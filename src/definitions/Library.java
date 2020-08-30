@@ -9,5 +9,30 @@ package definitions;
 public class Library {
     private Book[] allCurrentlyAvailableBooks;
 
+    public Library(Book[] allCurrentlyAvailableBooks) {
+        this.allCurrentlyAvailableBooks = allCurrentlyAvailableBooks;
+    }
+
+    public Library() {
+        this.allCurrentlyAvailableBooks = new Book[100];
+        for (int START_INDEX = 0; START_INDEX < allCurrentlyAvailableBooks.length; START_INDEX++)
+            allCurrentlyAvailableBooks[START_INDEX] = new Book("Book" + (START_INDEX + 1));
+
+    }
+
+    public void issuedBook(String bookName) {
+        System.out.println(bookName + "book is issued by you");
+    }
+
+    public void returnedBook(String bookName) {
+        System.out.println(bookName + "Thank you for returning the book!");
+    }
+
+    public void viewAllIssuedBooks() {
+        for (Book allCurrentAvailableBook : allCurrentlyAvailableBooks) {
+            System.out.println(allCurrentAvailableBook);
+        }
+    }
+
 
 }
