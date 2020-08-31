@@ -47,9 +47,6 @@ public class FrontDesk {
                 case SHOW_ISSUED_BOOKS:
                     myLibrary.showAllIssuedBooks();
                     break;
-                case EXIT:
-                    System.out.println("EXIT ");
-                    break;
                 default:
                     System.out.println("YOUR INOUT IS WRONG");
             }
