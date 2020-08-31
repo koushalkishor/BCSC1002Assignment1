@@ -9,43 +9,43 @@ package definitions;
 import java.util.Arrays;
 
 public class Library {
-    private Book[] allCurrentlyAvailableBooks;
+    private Book[] availableBooks;
 
-    public Library(Book[] allCurrentlyAvailableBooks) {
-        this.allCurrentlyAvailableBooks = allCurrentlyAvailableBooks;
+    public Library(Book[] availableBooks ) {
+        this.availableBooks = availableBooks;
     }
 
     public Library() {
-        this.allCurrentlyAvailableBooks = new Book[100];
-        for (int START_INDEX = 0; START_INDEX < allCurrentlyAvailableBooks.length; START_INDEX++)
-            allCurrentlyAvailableBooks[START_INDEX] = new Book("Book" + (START_INDEX + 1));
+        this.availableBooks = new Book[70];
+        for (int START= 0; START <availableBooks.length; START++)
+            availableBooks[START] = new Book("Book" + (START + 1));
 
     }
 
     public void issuedBook(String bookName) {
-        System.out.println(bookName + "book is issued by you");
+        System.out.println(bookName + "the book whisch is issued by you");
     }
 
     public void returnedBook(String bookName) {
-        System.out.println(bookName + "Thank you for returning the book!");
+        System.out.println(bookName + "returned");
     }
 
     public void viewAllIssuedBooks() {
-        for (Book allCurrentAvailableBook : allCurrentlyAvailableBooks) {
-            System.out.println(allCurrentAvailableBook);
+        for (Book availableBook : availableBooks) {
+            System.out.println(availableBooks);
         }
     }
 
-    public Book[] getAllCurrentlyAvailableBooks() {
-        return allCurrentlyAvailableBooks;
+    public Book[] getavailableBooks() {
+        return availableBooks;
     }
 
-    public void setAllCurrentlyAvailableBooks(Book[] allCurrentlyAvailableBooks) {
-        this.allCurrentlyAvailableBooks = allCurrentlyAvailableBooks;
+    public void setavailableBooks(Book[] availableBooks) {
+        this.availableBooks = availableBooks;
     }
 
     public String toString() {
-        return Arrays.toString(allCurrentlyAvailableBooks);
+        return Arrays.toString(availableBooks);
     }
 
     @Override
@@ -53,12 +53,12 @@ public class Library {
         if (this == o) return true;
         if (!(o instanceof Library)) return false;
         Library library = (Library) o;
-        return Arrays.equals(getAllCurrentlyAvailableBooks(), library.getAllCurrentlyAvailableBooks());
+        return Arrays.equals(getavailableBooks(), library.availableBooks());
     }
 
     @Override
     public int hashCode() {
-        return Arrays.hashCode(getAllCurrentlyAvailableBooks());
+        return Arrays.hashCode(availableBooks());
     }
 
 }
